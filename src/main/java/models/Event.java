@@ -49,4 +49,16 @@ public class Event {
             return priceFood = 0;
         }
     }
+
+    public int getPriceBeverage() {
+        if (this.beverage.equals("open_bar")) {
+            return priceBeverage = 100;
+        } else if (this.beverage.equals("one_round")) {
+            return priceBeverage = 10;
+        } else if (this.beverage.equals("byob")) {
+            return priceBeverage = 0;
+        } else {
+            return priceBeverage = 0;
+        }
+    }
 }
