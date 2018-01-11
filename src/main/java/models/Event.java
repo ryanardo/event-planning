@@ -7,7 +7,7 @@ public class Event {
     private Integer priceFood;
     private String beverage; // open_bar $100/guest, one_round $10/guest, byob $0/guest
     private Integer priceBeverage;
-    private String entertainment; // dj_muzik_person $100 000/event, ipod_playlist_on_shuffle $1 000/event, nickleback $0/event
+    private String entertainment; // DeeJay Muzik $100 000/event, ipod_playlist_on_shuffle $1 000/event, nickleback $0/event
     private Integer priceEntertainment;
     private Integer price; // price for the event; will equal the amount of 'guest * food + guest * beverage + entertainment'
 
@@ -59,6 +59,18 @@ public class Event {
             return priceBeverage = 0;
         } else {
             return priceBeverage = 0;
+        }
+    }
+    // DeeJay Muzik $100 000/event, iPod on Shuffle $1 000/event, nickleback $0/event
+    public int getPriceEntertainment() {
+        if (this.entertainment.equals("DeeJay Muzik")) {
+            return priceEntertainment = 100000;
+        } else if (this.entertainment.equals("iPod on Shuffle")) {
+            return priceEntertainment = 1000;
+        } else if (this.entertainment.equals("nickleback")) {
+            return priceEntertainment = 0;
+        } else {
+            return priceEntertainment = 0;
         }
     }
 }
