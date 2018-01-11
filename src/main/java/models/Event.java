@@ -15,4 +15,8 @@ public class Event {
         this.entertainment = entertainment;
         price = 0;
     }
+
+    public int getGuest() {
+        return guest;
+    }
 }

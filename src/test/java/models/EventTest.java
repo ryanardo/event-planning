@@ -23,7 +23,7 @@ public class EventTest {
     }
 
     @Test
-    public void newEvent_getsguest_100() {
+    public void newEvent_getsGuest_100() {
         Event testEvent = new Event(100, "course_meal_x10", "one_round", "nickleback");
         assertEquals(100, testEvent.getGuest());
     }
