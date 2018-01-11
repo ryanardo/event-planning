@@ -20,12 +20,16 @@ public class Event {
         return guest;
     }
 
+    public String getFood() {
+        return food;
+
+    }
+
     public String getBeverage() {
         return beverage;
     }
 
-    public String getFood() {
-        return food;
-
+    public String getEntertainment() {
+        return entertainment;
     }
 }
