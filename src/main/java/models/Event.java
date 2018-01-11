@@ -19,7 +19,7 @@ public class Event {
         this.priceFood = 0;
         this.priceBeverage = 0;
         this.priceEntertainment = 0;
-        this.price = (guest * priceFood) + (guest * priceBeverage) + priceEntertainment;
+        this.price = 0;
     }
 
     public int getGuest() {
@@ -74,4 +74,9 @@ public class Event {
         }
     }
 
+    public int getPrice() {
+        int total = (guest * priceFood) + (guest * priceBeverage) + priceEntertainment;
+        this.price = total;
+        return this.price;
+    }
 }
