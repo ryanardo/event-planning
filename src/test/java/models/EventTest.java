@@ -51,4 +51,10 @@ public class EventTest {
         Event testEvent = new Event(100, "x10", "one_round", "nickleback");
         assertEquals(100, testEvent.getPriceFood());
     }
+
+    @Test
+    public void newEvent_getPriceBeverage_10() {
+        Event testEvent = new Event(100, "x10", "one_round", "nickleback");
+        assertEquals(10, testEvent.getPriceBeverage());
+    }
 }
