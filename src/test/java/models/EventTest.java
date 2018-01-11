@@ -23,8 +23,14 @@ public class EventTest {
     }
 
     @Test
-    public void newEvent_getsGuest_100() {
+    public void newEvent_getGuest_100() {
         Event testEvent = new Event(100, "course_meal_x10", "one_round", "nickleback");
         assertEquals(100, testEvent.getGuest());
+    }
+
+    @Test
+    public void newEvent_getFood_course_meal_x10() {
+        Event testEvent = new Event(100, "course_meal_x10", "one_round", "nickleback");
+        assertEquals("course_meal_x10", testEvent.getFood());
     }
 }
