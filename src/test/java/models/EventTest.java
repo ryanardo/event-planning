@@ -21,4 +21,10 @@ public class EventTest {
         Event testEvent = new Event (100, "course_meal_x10", "one_round", "nickleback");
         assertEquals(true, testEvent instanceof Event);
     }
+
+    @Test
+    public void newEvent_getsguest_100() {
+        Event testEvent = new Event(100, "course_meal_x10", "one_round", "nickleback");
+        assertEquals(100, testEvent.getGuest());
+    }
 }
