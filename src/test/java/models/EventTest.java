@@ -15,4 +15,10 @@ public class EventTest {
     @After
     public void tearDown() throws Exception {
     }
+
+    @Test
+    public void newEvent_instantiatesCorrectly() throws Exception {
+        Event testEvent = new Event ("", "", "", "");
+        assertEquals(true, testEvent instanceof Event);
+    }
 }
