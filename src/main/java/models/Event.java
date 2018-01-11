@@ -51,9 +51,9 @@ public class Event {
     }
 
     public int getPriceBeverage() {
-        if (this.beverage.equals("open_bar")) {
+        if (this.beverage.equals("open bar")) {
             return priceBeverage = 100;
-        } else if (this.beverage.equals("one_round")) {
+        } else if (this.beverage.equals("first round")) {
             return priceBeverage = 10;
         } else if (this.beverage.equals("byob")) {
             return priceBeverage = 0;
@@ -63,9 +63,9 @@ public class Event {
     }
     // DeeJay Muzik $100 000/event, iPod on Shuffle $1 000/event, nickleback $0/event
     public int getPriceEntertainment() {
-        if (this.entertainment.equals("DeeJay Muzik")) {
+        if (this.entertainment.equals("deejay muzik")) {
             return priceEntertainment = 100000;
-        } else if (this.entertainment.equals("iPod on Shuffle")) {
+        } else if (this.entertainment.equals("iPod")) {
             return priceEntertainment = 1000;
         } else if (this.entertainment.equals("nickleback")) {
             return priceEntertainment = 0;
@@ -74,9 +74,15 @@ public class Event {
         }
     }
 
-    public int getPrice() {
-        int total = (guest * priceFood) + (guest * priceBeverage) + priceEntertainment;
-        this.price = total;
+//    public int getPrice() {
+//        int total = (guest * priceFood) + (guest * priceBeverage) + priceEntertainment;
+//        this.price = total;
+//        return this.price;
+//    }
+
+    public int priceTotal(){
+        int priceTotal = (guest * priceFood) + (guest * priceBeverage) + priceEntertainment;
+        this.price = priceTotal;
         return this.price;
     }
 }
