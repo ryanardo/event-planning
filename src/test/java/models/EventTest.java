@@ -18,7 +18,7 @@ public class EventTest {
 
     @Test
     public void newEvent_instantiatesCorrectly() throws Exception {
-        Event testEvent = new Event ("", "", "", "");
+        Event testEvent = new Event (100, "course_meal_x10", "one_round", "nickleback");
         assertEquals(true, testEvent instanceof Event);
     }
 }
