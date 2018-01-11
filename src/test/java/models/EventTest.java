@@ -33,4 +33,10 @@ public class EventTest {
         Event testEvent = new Event(100, "course_meal_x10", "one_round", "nickleback");
         assertEquals("course_meal_x10", testEvent.getFood());
     }
+
+    @Test
+    public void newEvent_getBeverage_one_round() {
+        Event testEvent = new Event(100, "course_meal_x10", "one_round", "nickleback");
+        assertEquals("one_round", testEvent.getBeverage());
+    }
 }
