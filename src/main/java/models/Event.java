@@ -1,15 +1,14 @@
 package models;
 
 public class Event {
-
-    private Integer guest; // number of guests to accommodate for
+    private int guest; // number of guests to accommodate for
     private String food; // type of meal per guest; course_meal_x3 $50/per, course_meal_x7 $70/per, course_meal_x10 $100/per
-    private Integer priceFood;
+    private int priceFood;
     private String beverage; // open_bar $100/guest, one_round $10/guest, byob $0/guest
-    private Integer priceBeverage;
+    private int priceBeverage;
     private String entertainment; // DeeJay Muzik $100 000/event, ipod_playlist_on_shuffle $1 000/event, nickleback $0/event
-    private Integer priceEntertainment;
-    private Integer price; // price for the event; will equal the amount of 'guest * food + guest * beverage + entertainment'
+    private int priceEntertainment;
+    private int price; // price for the event; will equal the amount of 'guest * food + guest * beverage + entertainment'
 
     public Event(int guest, String food, String beverage, String entertainment) {
         this.guest = guest;
@@ -21,7 +20,7 @@ public class Event {
         this.priceEntertainment = 0;
         this.price = 0;
     }
-
+    // GETTERS
     public int getGuest() {
         return guest;
     }
@@ -40,11 +39,14 @@ public class Event {
 
     public int getPriceFood() {
         if (this.food.equals("x3")) {
-            return priceFood = 50;
+            int priceFood = 50;
+            return priceFood;
         } else if (this.food.equals("x7")) {
-            return priceFood = 70;
+            int priceFood = 70;
+            return priceFood;
         } else if (this.food.equals("x10")) {
-            return priceFood = 100;
+            int priceFood = 100;
+            return priceFood;
         } else {
             return priceFood = 0;
         }
@@ -52,37 +54,37 @@ public class Event {
 
     public int getPriceBeverage() {
         if (this.beverage.equals("open bar")) {
-            return priceBeverage = 100;
+            int priceBeverage = 100;
+            return priceBeverage;
         } else if (this.beverage.equals("first round")) {
-            return priceBeverage = 10;
+            int  priceBeverage = 10;
+            return priceBeverage;
         } else if (this.beverage.equals("byob")) {
-            return priceBeverage = 0;
+            int priceBeverage = 0;
+            return priceBeverage;
         } else {
-            return priceBeverage = 0;
-        }
+            int priceBeverage = 0;
+            return priceBeverage;        }
     }
-    // DeeJay Muzik $100 000/event, iPod on Shuffle $1 000/event, nickleback $0/event
+
     public int getPriceEntertainment() {
         if (this.entertainment.equals("deejay muzik")) {
-            return priceEntertainment = 100000;
+            int priceEntertainment = 100000;
+            return priceEntertainment;
         } else if (this.entertainment.equals("iPod")) {
-            return priceEntertainment = 1000;
+            int priceEntertainment = 1000;
+            return priceEntertainment;
         } else if (this.entertainment.equals("nickleback")) {
-            return priceEntertainment = 0;
+            int priceEntertainment = 0;
+            return priceEntertainment;
         } else {
-            return priceEntertainment = 0;
+            int priceEntertainment = 0;
+            return priceEntertainment;
         }
     }
 
-//    public int getPrice() {
-//        int total = (guest * priceFood) + (guest * priceBeverage) + priceEntertainment;
-//        this.price = total;
-//        return this.price;
-//    }
-
-    public int priceTotal(){
-        int priceTotal = (guest * priceFood) + (guest * priceBeverage) + priceEntertainment;
-        this.price = priceTotal;
-        return this.price;
+    public int getPrice() {
+        int price = (this.guest * this.getPriceFood()) + (this.guest * this.getPriceBeverage()) + this.getPriceEntertainment();
+        return price;
     }
 }

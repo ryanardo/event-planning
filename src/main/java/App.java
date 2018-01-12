@@ -39,11 +39,11 @@ public class App {
                 Event userEvent = new Event(userGuest, userFood, userBeverage, userEntertainment);
                 System.out.println("----------------------");
                 System.out.println("Okie dokie, here's your new Event!");
-                System.out.println("Guest: " + userEvent.getGuest());
-                System.out.println("Food: " + userEvent.getFood());
-                System.out.println("Beverages: " + userEvent.getBeverage());
-                System.out.println("Entertainment: " + userEvent.getEntertainment());
-                System.out.println("Total Price: $" + userEvent.priceTotal());
+                System.out.println("GUEST | " + userEvent.getGuest());
+                System.out.println("FOOD | " + userEvent.getFood() + " for a total of: $" + userEvent.getPriceFood());
+                System.out.println("BEVERAGES | " + userEvent.getBeverage() + " for a total of: $" + userEvent.getPriceBeverage());
+                System.out.println("ENTERTAINMENT | " + userEvent.getEntertainment() + " for a total of: $" + userEvent.getPriceEntertainment());
+                System.out.println("TOTAL GET_PRICE | $" + userEvent.getPrice());
                 System.out.println("----------------------");
             }
         }
